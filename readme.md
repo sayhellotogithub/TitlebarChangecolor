@@ -30,20 +30,20 @@
 
 动态改变标题的背景色
 
- @Override
-    public void onScrollChanged(int x, int y, int oldx, int oldy) {
-        if (y <= 0) {
-            Log.e(TAG, "Top");
-            tvTitle.setBackgroundColor(Color.argb((int) 0, 227, 29, 26));//AGB由相关工具获得，或
-        } else if (y > 0 && y < height) {
-            Log.e(TAG, "middle");
-            float scale = (float) y / height;
-            float alpha = (255 * scale);
-            Log.e(TAG, "alpha:" + alpha);
-            // 只是layout背景透明(仿知乎滑动效果)
-            tvTitle.setBackgroundColor(Color.argb((int) alpha, 227, 29, 26));
-        } else {
-            Log.e(TAG, "Bottom");
-            tvTitle.setBackgroundColor(Color.argb((int) 255, 227, 29, 26));
-        }
-    }
+	 @Override
+	    public void onScrollChanged(int x, int y, int oldx, int oldy) {
+	        if (y <= 0) {
+	            Log.e(TAG, "Top");
+	            tvTitle.setBackgroundColor(Color.argb((int) 0, 227, 29, 26));//AGB由相关工具获得，或
+	        } else if (y > 0 && y < height) {
+	            Log.e(TAG, "middle");
+	            float scale = (float) y / height;
+	            float alpha = (255 * scale);
+	            Log.e(TAG, "alpha:" + alpha);
+	            // 只是layout背景透明(仿知乎滑动效果)
+	            tvTitle.setBackgroundColor(Color.argb((int) alpha, 227, 29, 26));
+	        } else {
+	            Log.e(TAG, "Bottom");
+	            tvTitle.setBackgroundColor(Color.argb((int) 255, 227, 29, 26));
+	        }
+	    }
